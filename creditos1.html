@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cópia de Texto</title>
+    <style>
+        
+        body{
+            background:black;
+            color:white;
+        }
+        h2{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cópia o Codigo</h2>
+    
+    
+    <!-- Campo de entrada de texto -->
+    <input type="text" id="meuInput" value="647720985">
+    
+    <!-- Botão para copiar o texto -->
+    <button onclick="copiarTexto()">Copiar</button><br><br>
+    Após Cópia Acesse o Site e cole o Codigo
+
+<script>
+        function copiarTexto() {
+            // Seleciona o elemento input
+            var textoCopiado = document.getElementById("meuInput");
+            
+            // Seleciona o texto
+            textoCopiado.select();
+            textoCopiado.setSelectionRange(0, 99999); // Para dispositivos móveis
+            
+            // Copia o texto para a área de transferência
+            navigator.clipboard.writeText(textoCopiado.value);
+            
+            // Exibe uma mensagem de confirmação
+            alert("Codigo copiado Sucess: " + textoCopiado.value);
+        }
+    </script>
+</body>
+
+</html>
+
