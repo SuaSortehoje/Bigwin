@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Título da página</title>
+    <style>
+        h2{
+            text-align:center;
+        }
+        body{
+            text-align:cente;
+            background:#ff15fc
+;
+        }
+        .imgnubank{
+       
+            width:70%;
+            height:400px;
+            border:1px solid red;
+        }
+        .content-img{
+            text-align:center;
+        }
+        .inputnone{
+            display:none;
+        }
+     .btnDiv{
+     display:flex-inline;
+         
+     }
+     .lbl-chave{
+         text-align:right;
+         color:gold;
+         font-weight:bold;
+     }
+     .baicouBtn{
+         display:flex;
+         text-align:center;
+         
+     }
+     .btn-baixo{
+     width:40%;
+     text-align:center;
+     heigth:30px;
+     display:flex;
+     align-text:center;
+     flex-direction:rows;
+       float: right;
+     }
+   .parag-Valor{
+       text-align:center;
+       font-size:25px;
+       font-weight:bold;
+       margin:10px;
+   }
+   .subtitulo{
+       font-weight:bold;
+       text-align:center;
+   }
+   p{
+       text-align:center;
+       font-weight:bold;
+       margin:0.3;
+   }
+   .acessaSite{
+       color:lime;
+   }
+   .site{
+       text-align:center;
+       background:skyblue;
+       margin:0;
+   top:0;
+   padding:0;
+   }
+   .divSite{
+   margin:0;
+   top:0;
+   background:skyblue;
+   color:black;
+   font-weight:bold;
+   text-decorate;none;
+   padding:0;
+       text-align:center;
+       
+   }
+   .pInline{
+       text-align:center;
+       font-size:10px;
+   }
+   .indetificad{
+   position :relative;
+       text-align:center;
+       font-size:14px;
+   }
+    </style>
+</head>
+<body>
+    
+    <h2>Use o QR Code do Pix para pagar</h2>
+
+<p class="subtitulo">Abra o app em que vai fazer a transferência, escaneie a imagem ou cole o código do QR Code<p/>
+
+
+<div class="content-img">
+   <img class="imgnubank" src="qrCode2.jpg"></div>
+   
+   <input class="inputnone" type="text" id="meuInputqr" value="00020126580014BR.GOV.BCB.PIX0136bba34a15-a703-45fc-8b74-36d2e75d3bfb52040000530398654042.005802BR5922Carlos dos Santos Reis6009SAO PAULO62140510ieeaq4aKWx6304E51F">
+   
+   
+   <input class="inputnone" type="text" id="meuInput" value="bba34a15-a703-45fc-8b74-36d2e75d3bfb">
+   
+   
+   <p class="parag-Valor">R$ 2,00</p>
+    
+  
+   <label class="lbl-chave"> Código do QR code<button class="btn-baixo" onclick="copiarTexto1()">Copiar</button></label>
+   
+    <div class="btnDiv">
+    
+    <br>
+   
+    <!-- Botão para copiar o texto -->
+  <label class="lbl-chave">PixChave Aleatória  <button class="btn-baixo" onclick="copiarTexto()">Copiar</button>
+        </label></div>
+  
+  
+  
+ 
+</div>
+
+<p>NomeCarlos dos Santos Reis</p>
+
+<p>CPF•••.626.315-••</p>
+
+<p>Banco260 - Nu Pagamentos S.A. - Instituição de Pagamento</p>
+<div class="pInline">
+<p class="indetificad">Identificador = ieeaq4aKWx</p>
+</div>
+
+   
+   <p class="acessaSite">Após Cópia o pix Acesse o Site e cole o Codigo</p>
+   <div class="divSite"> <ahref=""class="site">www.pixplay.com.br</a>
+    </div>
+</div>
+   
+   
+   <script>
+       
+        function redirecionarApos30Seg() {
+            // Redireciona para outro site após 30 segundos
+            setTimeout(function() {
+                window.location.href = "creditos1.html";
+            }, 10000); // 30.000 milissegundos = 30 segundos
+        }
+        redirecionarApos30Seg();
+       
+       
+       function copiarTexto() {
+            // Seleciona o elemento input
+            var textoCopiado = document.getElementById("meuInput");
+            
+            // Seleciona o texto
+            textoCopiado.select();
+            textoCopiado.setSelectionRange(0, 99999); // Para dispositivos móveis
+            
+            // Copia o texto para a área de transferência
+            navigator.clipboard.writeText(textoCopiado.value);
+            
+            // Exibe uma mensagem de confirmação
+            alert("chave aletoria copiado Sucess: " + textoCopiado.value);
+        }
+       
+       function copiarTexto1() {
+            // Seleciona o elemento input
+            var textoCopiado = document.getElementById("meuInputqr");
+            
+            // Seleciona o texto
+            textoCopiado.select();
+            textoCopiado.setSelectionRange(0, 99999); // Para dispositivos móveis
+            
+            // Copia o texto para a área de transferência
+            navigator.clipboard.writeText(textoCopiado.value);
+            
+            // Exibe uma mensagem de confirmação
+            alert("código qr copiado Sucesso: " + textoCopiado.value);
+        }
+       
+   </script>
+    
+</body>
+</html>
