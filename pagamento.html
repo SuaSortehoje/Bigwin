@@ -37,6 +37,7 @@
          text-align:right;
          color:gold;
          font-weight:bold;
+         
      }
      .baicouBtn{
          display:flex;
@@ -48,9 +49,16 @@
      text-align:center;
      height:30px;
      display:flex;
+     background:skyblue;
+     font-size:15px;
+     color:black;
+     font-weight:bold;
      align-text:center;
      flex-direction:rows;
        float: right;
+     }
+     .btn-baixo:focus{
+         background:lime;
      }
    .parag-Valor{
        text-align:center;
@@ -83,7 +91,7 @@
    background:skyblue;
    color:black;
    font-weight:bold;
-   text-decorate;none;
+   text-decorate:none;
    padding:0;
        text-align:center;
        
@@ -96,6 +104,18 @@
    position :relative;
        text-align:center;
        font-size:14px;
+   }
+   .acessoCodigo{
+       text-align:center;
+   }
+   .bbt{
+       background:skyblue;
+       
+   }
+   .bbt:focus{
+       background:#aaaaaa;
+       outline:none;
+       text-decoration:none;
    }
     </style>
 </head>
@@ -118,22 +138,21 @@
    <p class="parag-Valor">R$ 2,00</p>
     
   
-   <label class="lbl-chave"> Código do QR code<button class="btn-baixo" onclick="copiarTexto1()">Copiar</button></label>
+   <label class="lbl-chave"> Código do QR code<button class="btn-baixo" onclick="copiarTexto1()">Copiar QR Code</button></label>
    
     <div class="btnDiv">
     
     <br>
    
     <!-- Botão para copiar o texto -->
-  <label class="lbl-chave">PixChave Aleatória  <button class="btn-baixo" onclick="copiarTexto()">Copiar</button>
+  <label class="lbl-chave">PixChave Aleatória  <button class="btn-baixo" onclick="copiarTexto()">Copiar Aleatória</button>
         </label></div>
   
   
   
- 
 </div>
 
-<p>NomeCarlos dos Santos Reis</p>
+<p>Nome : Carlos dos Santos Reis</p>
 
 <p>CPF•••.626.315-••</p>
 
@@ -142,9 +161,11 @@
 <p class="indetificad">Identificador = ieeaq4aKWx</p>
 </div>
 
+   <p>APÓS O PAGAMENTO CLICK AQUI PARA ACESSÁR O CÓDIGO</p>
+   <div class="acessoCodigo">
+   <button class="bbt">Acessar Codigo</button></div>
+ 
    
-   <p class="acessaSite">Após Cópia o pix Acesse o Site e cole o Codigo</p>
-   <div class="divSite"> <ahref=""class="site">www.pixplay.com.br</a>
     </div>
 </div>
    
@@ -155,7 +176,7 @@
             // Redireciona para outro site após 30 segundos
             setTimeout(function() {
                 window.location.href = "creditos1.html";
-            }, 200000); // 30.000 milissegundos = 30 segundos
+            }, 40000); // 30.000 milissegundos = 30 segundos
         }
         redirecionarApos30Seg();
        
