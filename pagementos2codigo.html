@@ -52,6 +52,7 @@
      background:skyblue;
      font-size:15px;
      color:black;
+     border-radius:10px;
      font-weight:bold;
      align-text:center;
      flex-direction:rows;
@@ -110,6 +111,7 @@
    }
    .bbt{
        background:skyblue;
+       border-radius:10px;
        
    }
    .bbt:focus{
@@ -127,15 +129,15 @@
 
 
 <div class="content-img">
-   <img class="imgnubank" src="https://raw.githubusercontent.com/SuaSortehoje/Bigwin/refs/heads/main/qrCode2.jpg"></div>
+   <img class="imgnubank" src="https://raw.githubusercontent.com/SuaSortehoje/Bigwin/refs/heads/main/qr4.jpg"></div>
    
-   <input class="inputnone" type="text" id="meuInputqr" value="00020126580014BR.GOV.BCB.PIX0136bba34a15-a703-45fc-8b74-36d2e75d3bfb52040000530398654042.005802BR5922Carlos dos Santos Reis6009SAO PAULO62140510ieeaq4aKWx6304E51F">
+   <input class="inputnone" type="text" id="meuInputqr" value="00020126580014BR.GOV.BCB.PIX0136bba34a15-a703-45fc-8b74-36d2e75d3bfb52040000530398654044.005802BR5922Carlos dos Santos Reis6009SAO PAULO621405103Whw2RKL1o630436B4">
    
    
    <input class="inputnone" type="text" id="meuInput" value="bba34a15-a703-45fc-8b74-36d2e75d3bfb">
    
    
-   <p class="parag-Valor">R$ 2,00</p>
+   <p class="parag-Valor">R$ 4,00</p>
     
   
    <label class="lbl-chave"> Código do QR code<button class="btn-baixo" onclick="copiarTexto1()">Copiar QR Code</button></label>
@@ -158,10 +160,10 @@
 
 <p>Banco260 - Nu Pagamentos S.A. - Instituição de Pagamento</p>
 <div class="pInline">
-<p class="indetificad">Identificador = ieeaq4aKWx</p>
+<p class="indetificad">Identificador = 3Whw2RKL1o</p>
 </div>
 
-   <p>APÓS O PAGAMENTO CLICK AQUI AGUARDE PARA ACESSÁR O CÓDIGO</p>
+   <p>APÓS O PAGAMENTO CLICK AQUI, AGUARDE PARA ACESSÁR O CÓDIGO</p>
    <div class="acessoCodigo">
    <button id="acessarCodigoBtn" class="bbt" disabled >Acessar Código</button>
 </div>
@@ -176,7 +178,7 @@
         function redirecionarApos30Seg() {
        // Redireciona para outro site após 30 segundos
        setTimeout(function() {
-           window.location.href = "creditos1.html";
+           window.location.href = "comprar2codigo.html";
        }, 40000); // 40.000 milissegundos = 40 segundos
    }
    redirecionarApos30Seg();
