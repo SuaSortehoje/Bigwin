@@ -55,21 +55,21 @@
     
     <!-- Campo de entrada de texto -->
     <div class="iinput">
-    <input class="inpuTxt" type="text" id="meuInput" value="647720985"readonly>
+    <input class="inpuTxt" type="text" id="meuInput" value="592315254"readonly>
     
     <!-- Botão para copiar o texto -->
     <button onclick="copiarTexto()">Copiar</button>
     </div><br>
     <div class="iinput">
-    <input class="inpuTxt" type="text" id="meuInput" value="647720985"readonly>
+    <input class="inpuTxt" type="text" id="meuInput1" value="487021874"readonly>
     
     <!-- Botão para copiar o texto -->
-    <button onclick="copiarTexto()">Copiar</button>
+    <button onclick="copiarTexto1()">Copiar</button>
     </div>
     
 <div class="divSite"> 
     Após Cópia Acesse o Site e cole o Codigo
-   <p class="site"> <a href="https://pixplay.netlify.app/">www.pixplay.com.br</a></p>
+   <button class="site" onclick="parada()">www.pixplay.com.br</button>
     </div>
     <p class ="txtpg">ESSE CÓDIGO SÓ TEM VALIDADE PARA PREMIAÇÃO COM O PAGAMENTO SENDO FEITO ANTES DA VALIDACAO DO JOGO. </p>
     </div>
@@ -87,6 +87,26 @@
             
             // Exibe uma mensagem de confirmação
             alert("Codigo copiado Sucess: " + textoCopiado.value);
+        }
+        function parada(){
+            window.open("https://pixplay.netlify.app/", "_blank");
+        }
+        function copiarTexto1() {
+            // Seleciona o elemento input
+            var textoCopiado = document.getElementById("meuInput1");
+            
+            // Seleciona o texto
+            textoCopiado.select();
+            textoCopiado.setSelectionRange(0, 99999); // Para dispositivos móveis
+            
+            // Copia o texto para a área de transferência
+            navigator.clipboard.writeText(textoCopiado.value);
+            
+            // Exibe uma mensagem de confirmação
+            alert("Codigo copiado Sucess: " + textoCopiado.value);
+        }
+        function parada(){
+            window.open("https://pixplay.netlify.app/", "_blank");
         }
     </script>
 </body>
