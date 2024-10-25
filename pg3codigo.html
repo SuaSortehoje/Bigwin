@@ -149,6 +149,7 @@
    <p class="parag-Valor">R$ 6,00</p>
     
   
+ 
    <label class="lbl-chave"> Código do QR code<button id="meuBotao" class="btn-baixo" onclick="chamar()">Copiar QR Code</button></label>
    
     <div class="btnDiv">
@@ -172,23 +173,24 @@
 <p class="indetificad">Identificador = 3Whw2RKL1o</p>
 </div>
 
-   <p>APÓS O PAGAMENTO CLICK AQUI, AGUARDE PARA ACESSÁR O CÓDIGO</p>
+ <p>APÓS O PAGAMENTO CLICK AQUI,</p>
    <div class="acessoCodigo">
-   <button id="acessarCodigoBtn" class="bbt hidden" onclick="redirecionarApos30Seg();">Acessar Código</button>
+   <button id="acessarCodigoBtn" class="bbt hidden" onclick="aguarde()">Acessar Código</button>
 </div>
-
+ <p>AGUARDE PARA ACESSÁR O CÓDIGO</p>
+   
    
     </div>
 </div>
    
    
-   <script>
+      <script>
    function redirecionarApos30Seg() {
-       // Redireciona para outro site após 30 segundos
-       setTimeout(function() {
-           window.location.href = "Creditos1.html";
-       }, 30000); // 30.000 milissegundos = 30 segundos
-   }
+    // Abre outra página em uma nova guia após 30 segundos
+    setTimeout(function() {
+        window.open("comprar3codigo.html", "_blank");
+    }, 60000); // 30.000 milissegundos = 30 segundos
+}
 
    function copiarTexto() {
        // Seleciona o elemento input
@@ -207,7 +209,7 @@
        // Mostra o botão "Acessar Código" após 10 segundos
        setTimeout(function() {
            document.getElementById("acessarCodigoBtn").classList.remove('hidden');
-       }, 10000); // 10.000 milissegundos = 10 segundos
+       }, 50000); // 10.000 milissegundos = 10 segundos
    }
 
    function copiarTexto1() {
@@ -227,7 +229,7 @@
        // Mostra o botão "Acessar Código" após 10 segundos
        setTimeout(function() {
            document.getElementById("acessarCodigoBtn").classList.remove('hidden');
-       }, 10000); // 10.000 milissegundos = 10 segundos
+       }, 50000); // 10.000 milissegundos = 10 segundos
    }
 
    function alterarTexto() {
@@ -247,7 +249,11 @@
        copiarTexto();
        alterarTexto2();
    }
+   function aguarde(){
+   redirecionarApos30Seg();
+       alert("Aguarde Nessa Tela");
+       
+   }
 </script>
-
 </body>
 </html>
